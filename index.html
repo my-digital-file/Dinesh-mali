@@ -673,5 +673,24 @@
             closeModal('download-tip-modal');
         }
     </script>
+<!-- 🔒 DOWNLOAD PROTECTION SCRIPT (PASTE HERE) -->
+    <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+
+    document.addEventListener("keydown", function(e) {
+      if (e.ctrlKey && (
+          e.key === "u" ||
+          e.key === "s" ||
+          e.key === "c" ||
+          e.key === "p"
+      )) {
+        e.preventDefault();
+      }
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+    });
+    </script>
+    <!-- 🔒 END -->
 </body>
 </html>
